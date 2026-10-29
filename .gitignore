@@ -1,0 +1,28 @@
+# Python
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+.Python
+
+# Backups
+*.bak
+*.bak2
+*.tmp.npy
+*.npz.tmp
+
+# Logs / pasted terminal captures
+*.txt.log
+Pasted*
+kabbo@*
+monitor_pasted*
+
+# OS
+.DS_Store
+
+# Model artifacts (regenerate with `train`)
+results/wti_weekly/preds/
+results/wti_weekly/tails/
+results/wti_weekly/tails.npy
+results/wti_weekly/decomp_train.npy
+results/wti_weekly/metrics/

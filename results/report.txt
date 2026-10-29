@@ -1,0 +1,25 @@
+
+==================== WTI weekly ====================
+Table 4 analogue (point forecasts; mean of runs; paper value in brackets)
+model                            RMSE              MAPE %  runs   sec/run
+EEMD-SVR             10.8354 [2.5616]    15.2032 [4.0145]    20         1
+EEMD-BiLSTM           7.2633 [1.8327]    10.5236 [2.8837]     1      1236
+EEMD-CNN              5.1735 [1.8747]     7.6921 [2.9215]     1        74
+CNN-BiLSTM            2.8309 [2.6759]     4.2018 [4.3720]     1       136
+EEMD-CNN-BiLSTM       9.7026 [1.4390]    12.6174 [2.1581]     1      1336
+
+Table 6 analogue (probabilistic; mean of runs; paper value in brackets)
+model                          Pinball             CRPS            PINAW             PICP %
+EEMD-SVR-QR            4.4739 [1.8043]  8.9187 [2.7845]  0.0244 [0.3052]     7.03 [86.20]
+EEMD-BiLSTM-QR         2.7797 [1.2387]  5.4639 [2.0836]  0.3133 [0.2154]    99.02 [100.00]
+EEMD-CNN-QR            1.5400 [1.2590]  2.9720 [2.1601]  0.2115 [0.1880]    98.53 [99.38]
+CNN-BiLSTM-QR          1.0245 [1.3234]  2.0549 [2.2423]  0.1841 [0.1732]    98.37 [73.65]
+EEMD-CNN-BiLSTM-QR     3.3688 [1.1152]  6.6084 [1.8879]  0.3145 [0.1811]    99.18 [100.00]
+
+Friedman + Nemenyi on MAPE, WTI weekly: L=1 runs, k=5 models
+  chi2_F=4.0000  F_F=inf  critical F=nan  q0.05=2.728  CD=6.100  -> null NOT rejected
+  mean ranks: EEMD-SVR=5.000, EEMD-BiLSTM=3.000, EEMD-CNN=2.000, CNN-BiLSTM=1.000, EEMD-CNN-BiLSTM=4.000
+
+Friedman + Nemenyi on CRPS, WTI weekly: L=1 runs, k=5 models
+  chi2_F=4.0000  F_F=inf  critical F=nan  q0.05=2.728  CD=6.100  -> null NOT rejected
+  mean ranks: EEMD-SVR=5.000, EEMD-BiLSTM=3.000, EEMD-CNN=2.000, CNN-BiLSTM=1.000, EEMD-CNN-BiLSTM=4.000
